@@ -1,0 +1,8 @@
+Package: SampleSizeDiagnostics
+Type: Package
+Title: Choosing Sample Size for Evaluating a Diagnostic Test
+Version: 0.1.0
+Author: Mohamed Kamal
+Maintainer: Mohamed Kamal <mohamed.kamal@57357.org>
+Description: This package provides a function to calculate the sample size needed for evaluating a diagnostic test based on sensitivity, specificity, prevalence, and desired precision.
+License: GPL-3
