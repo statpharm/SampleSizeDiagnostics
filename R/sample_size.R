@@ -1,7 +1,8 @@
-calculate_sample_size <- function(sn = 0.90, sp = 0.85, p = 0.20, w = 0.10, Disease = "Disease Name", CI = "95%") {
+calculate_sample_size <- function(sn = 0.90, sp = 0.85, p = 0.20, w = 0.10, 
+                                  Disease = "Disease Name", CI = 0.95) {
   # Step 2: Calculate TP+FN
   a_c <- (1.96^2) * sn * (1 - sn) / (w^2) # 1.645 for 90% or 1.96 for 95% CI
-  if (CI == "90%") {
+  if (CI == 0.9) {
     a_c <- (1.645^2) * sn * (1 - sn) / (w^2)
   }
   
