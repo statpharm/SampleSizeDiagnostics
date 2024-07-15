@@ -18,3 +18,29 @@ To use the `SampleSizeDiagnostics` package, you can install it from GitHub using
 library(devtools)
 install_github("statpharm/SampleSizeDiagnostics")
 library(SampleSizeDiagnostics)
+
+## Usage
+
+To understand how to use the package and its functions, you can access the help documentation:
+
+```r
+?calculate_sample_size
+
+## Example
+
+Here is an example of how to calculate the sample size with given parameters:
+This function call will calculate the required sample size for a diagnostic study with:
+
+    Sensitivity (sn) of 0.9
+    Specificity (sp) of 0.85
+    Prevalence (p) of 0.2
+    Width of the confidence interval (w) of 0.1
+    Confidence level (CI) of 0.95
+
+```r
+calculate_sample_size(sn = 0.9,
+                      sp = 0.85,
+                      p = 0.2,
+                      w = 0.1,
+                      CI = 0.95)
+
