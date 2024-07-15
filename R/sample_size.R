@@ -1,3 +1,19 @@
+#' Calculate Sample Size for Evaluating a Diagnostic Test
+#'
+#' This function calculates the sample size needed for evaluating a diagnostic test based on sensitivity, specificity, prevalence, and desired precision.
+#'
+#' @param sn Sensitivity of the diagnostic test (default is 0.90).
+#' @param sp Specificity of the diagnostic test (default is 0.85).
+#' @param p Prevalence of the disease (default is 0.20).
+#' @param w Desired width of the confidence interval (default is 0.10).
+#' @param Disease Name of the disease (default is "Disease Name").
+#' @param CI Confidence interval level, either "95%" or "90%" (default is "95%").
+#' @return A data frame containing the calculated sample sizes and input parameters.
+#' @examples
+#' calculate_sample_size()
+#' @export
+
+
 calculate_sample_size <- function(sn = 0.90, sp = 0.85, p = 0.20, w = 0.10, 
                                   Disease = "Disease Name", CI = 0.95) {
   # Step 2: Calculate TP+FN
