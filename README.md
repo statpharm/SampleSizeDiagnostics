@@ -24,7 +24,7 @@ library(SampleSizeDiagnostics)
 To understand how to use the package and its functions, you can access the help documentation:
 
 ```r
-?calculate_sample_size
+?SampleSizeDiagnostics 
 ```
 ## Example
 
@@ -38,7 +38,7 @@ This function call will calculate the required sample size for a diagnostic stud
     Confidence level (CI) of 0.95
 
 ```r
-calculate_sample_size(sn = 0.9,
+SampleSizeDiagnostics(sn = 0.9,
                       sp = 0.85,
                       p = 0.2,
                       w = 0.1,
