@@ -1,1 +1,1 @@
-export(calculate_sample_size)
+export(SampleSizeDiagnostics)
