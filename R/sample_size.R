@@ -8,12 +8,26 @@
 #' @param w Desired width of the confidence interval (default is 0.10).
 #' @param CI Confidence interval level, either 0.95 or 0.9 (default is 0.95).
 #' @return A data frame containing the calculated sample sizes and input parameters.
+#'
+#' @details
+#' Abstract of Buderer (1996): Careful consideration of statistical issues related to the choice of a sample size is critical for achieving
+#' meaningful results in research studies designed to evaluate diagnostic tests. When assessing the ability of a
+#' diagnostic test to screen for disease, the parameters sensitivity, specificity, and predictive values are of interest.
+#' Study sample size requirements can be calculated based on a clinically acceptable degree of precision. the
+#' hypothesized values of sensitivity and specificity, and the estimated prevalence of disease in the target population. The simple methods and tables in this paper guide the researcher when deciding how many subjects
+#' to sample in a study designed to estimate both the sensitivity and the specificity of a diagnostic test, given a
+#' specified precision and estimated disease prevalence.
+#'
+#' @references Buderer, N. M. F. (1996). Statistical methodology: I. Incorporating the prevalence of disease into the sample size calculation for sensitivity and specificity. Academic Emergency Medicine, 3(9), 895-900.
+#'
 #' @examples
-#' calculate_sample_size()
+#'
+#' SampleSizeDiagnostics(sn = 0.9, sp = 0.85, p = 0.2, w = 0.1, ci = .95)
+#' SampleSizeDiagnostics(sn = 0.9, sp = 0.85, p = 0.2, w = 0.1, ci = .9)
 #' @export
 
 
-calculate_sample_size <- function(sn , sp , p , w = 0.10, CI = 0.95) {
+SampleSizeDiagnostics <- function(sn , sp , p , w = 0.10, CI = 0.95) {
   # Calculate TP+FN
   a_c <- (1.96^2) * sn * (1 - sn) / (w^2) # 1.645 for 90% or 1.96 for 95% CI
   if (CI == 0.9) {
