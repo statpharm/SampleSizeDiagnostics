@@ -22,8 +22,8 @@
 #'
 #' @examples
 #'
-#' SampleSizeDiagnostics(sn = 0.9, sp = 0.85, p = 0.2, w = 0.1, ci = .95)
-#' SampleSizeDiagnostics(sn = 0.9, sp = 0.85, p = 0.2, w = 0.1, ci = .9)
+#' SampleSizeDiagnostics(sn = 0.9, sp = 0.85, p = 0.2, w = 0.1, CI = 0.95)
+#' SampleSizeDiagnostics(sn = 0.9, sp = 0.85, p = 0.2, w = 0.1, CI = 0.9)
 #' @export
 
 
