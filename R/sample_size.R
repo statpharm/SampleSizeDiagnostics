@@ -44,7 +44,7 @@ SampleSizeDiagnostics <- function(sn , sp , p , w = 0.10, CI = 0.95) {
   
   # Calculate FP+TN
   b_d <- (1.96^2) * sp * (1 - sp) / (w^2) # 1.645 for 90% or 1.96 for 95% CI
-  if (CI == "90%") {
+  if (CI == 0.9) {
     b_d <- (1.645^2) * sp * (1 - sp) / (w^2)
   }
   
