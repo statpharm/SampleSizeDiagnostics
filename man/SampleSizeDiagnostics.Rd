@@ -15,10 +15,20 @@ SampleSizeDiagnostics(sn, sp, p, w = 0.1, CI = 0.95)
 
 \item{w}{Desired width of the confidence interval (default is 0.10).}
 
-\item{CI}{Confidence interval level, either 0.95 or 0.9 (default is 0.95).}
+\item{CI}{Confidence interval level, either 0.95 or 0.9 (default is 0.95). Only 0.95 and 0.9 are allowed.}
 }
 \value{
-A data frame containing the calculated sample sizes and input parameters.
+A data frame containing the calculated sample sizes and input parameters:
+\describe{
+  \item{Precision}{Desired width of the confidence interval}
+  \item{Sensitivity}{Sensitivity of the diagnostic test}
+  \item{Specificity}{Specificity of the diagnostic test}
+  \item{Prevalence}{Prevalence of the disease}
+  \item{SS_sensitivity}{Sample size for sensitivity}
+  \item{SS_specificity}{Sample size for specificity}
+  \item{Total_Sample_Size}{Total sample size needed (maximum of ss_sensitivity and ss_specificity)}
+  \item{CI}{Confidence interval level}
+}
 }
 \description{
 This function calculates the sample size needed for evaluating a diagnostic test based on sensitivity, specificity, prevalence, and desired precision.
@@ -33,7 +43,6 @@ to sample in a study designed to estimate both the sensitivity and the specifici
 specified precision and estimated disease prevalence.
 }
 \examples{
-
 SampleSizeDiagnostics(sn = 0.9, sp = 0.85, p = 0.2, w = 0.1, CI = 0.95)
 SampleSizeDiagnostics(sn = 0.9, sp = 0.85, p = 0.2, w = 0.1, CI = 0.9)
 }
