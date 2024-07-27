@@ -2,9 +2,16 @@ Package: SampleSizeDiagnostics
 Type: Package
 Title: Choosing Sample Size for Evaluating a Diagnostic Test
 Version: 0.1.0
-Author: Mohamed Kamal
-Maintainer: Mohamed Kamal <mohamed.kamal@57357.org>
-Description: This package provides a function to calculate the sample size needed for evaluating a diagnostic test based on sensitivity, specificity, prevalence, and desired precision.
+Authors@R: c(person(given = "Mohamed", family = "Kamal", email = "mohamedkamalhospital@gmail.com", role = c("aut","cre")))
+Description: Calculates the sample size needed for evaluating a diagnostic test based on sensitivity, specificity, prevalence, and desired precision. Based on Buderer (1996) <doi:10.1111/j.1553-2712.1996.tb03538.x>.
 License: GPL-3
 Encoding: UTF-8
 RoxygenNote: 7.2.3
+Suggests: testthat, roxygen2, knitr, rmarkdown
+VignetteBuilder: knitr
+NeedsCompilation: no
+Packaged: 2024-07-22 05:46:01 UTC; kamal
+Author: Mohamed Kamal [aut, cre]
+Maintainer: Mohamed Kamal <mohamedkamalhospital@gmail.com>
+Repository: CRAN
+Date/Publication: 2024-07-26 19:40:07 UTC
