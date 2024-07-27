@@ -1,0 +1,59 @@
+---
+title: "Choosing Sample Size for Evaluating a Diagnostic Test"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Choosing Sample Size for Evaluating a Diagnostic Test}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Introduction
+
+The `SampleSizeDiagnostics` package provides a function for calculating the sample size needed for evaluating a diagnostic test based on sensitivity, specificity, prevalence, and desired precision.
+
+In this vignette, we will demonstrate how to use the `SampleSizeDiagnostics` function to calculate the necessary sample size for different scenarios.
+
+## Example Usage
+
+Load the package:
+
+```r
+library(SampleSizeDiagnostics)
+```
+
+## Basic Example
+
+Let's calculate the sample size needed for a diagnostic test with the following parameters:
+
+    Sensitivity: 0.9
+    Specificity: 0.85
+    Prevalence: 0.2
+    Desired width of the confidence interval: 0.1
+    Confidence interval level: 0.95
+    
+```r
+result <- SampleSizeDiagnostics(sn = 0.9, sp = 0.85, p = 0.2, w = 0.1, CI = 0.95)
+print(result)
+```
+
+## Varying the Confidence Interval
+
+You can also calculate the sample size with a different confidence interval level, for example, 0.9:
+
+```r
+result <- SampleSizeDiagnostics(sn = 0.9, sp = 0.85, p = 0.2, w = 0.1, CI = 0.9)
+print(result)
+```
+
+## Interpretation of Results
+
+The function returns a data frame containing the calculated sample sizes and input parameters. Here is a breakdown of the output:
+
+    Precision: Desired width of the confidence interval
+    Sensitivity: Sensitivity of the diagnostic test
+    Specificity: Specificity of the diagnostic test
+    Prevalence: Prevalence of the disease
+    N1: Sample size for sensitivity
+    N2: Sample size for specificity
+    Total_Subjects: Total sample size needed (maximum of N1 and N2)
+    CI: Confidence interval level
