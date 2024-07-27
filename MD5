@@ -1,0 +1,10 @@
+6108b0ddd6afd112bee97c1bb22e79d5 *DESCRIPTION
+fc2a7bc1a291d3dcf652e3dc5b57e419 *NAMESPACE
+d2b94a4779b0268aaa6c9a55f1251804 *R/sample_size.R
+37d08ea78c06de439d5bcbe4a5c5ad61 *README.md
+158692de65067d25b485963bd613c356 *build/vignette.rds
+90f42c93d2169934880f9bd36ed3e6ea *inst/doc/SampleSizeDiagnostics.Rmd
+d7b2c2f0e96abdc0ac05a3045c655310 *inst/doc/SampleSizeDiagnostics.html
+835f9034a66ffd1c2b014e74a3737b9b *man/SampleSizeDiagnostics.Rd
+c0c2264816c7dd2ce1e25278a38b0792 *tests/testthat/test-sample_size.R
+90f42c93d2169934880f9bd36ed3e6ea *vignettes/SampleSizeDiagnostics.Rmd
